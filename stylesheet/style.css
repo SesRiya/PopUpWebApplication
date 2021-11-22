@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+}
+
+footer {
+    background: rgb(95, 175, 175);
+    height: 15vh;
+}
+
+header {
+    background-color: white;
+    justify-content: space-between;
+    width: 100%;
+    height: 20vh;
+}
+
+header,
+footer {
+    padding: 0.1em 0.6em;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+.loginbutton{
+    display: inline-block;
+}
+
+.searchbar{
+    display: inline-block;
+    margin-left: 75vw;
+}
+.searchbutton {
+    display: inline-block;
+    align-items: center;
+    /*margin-left: 80vw;*/
+}
+/* Navigation Bar  Items CSS  */
+.navbar {
+    display: flex;
+    background-color: rgb(95, 175, 175);
+    align-items: center;
+    /* width: 100vw; */
+}
+
+/* Logo */
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    width: 30vw;
+    vertical-align: middle;
+    margin-left: 30px;
+    height: 80px;
+}
+
+/* Navigation Links */
+.nav-links a {
+    display: inline-block;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+}
+
+/* .nav-links:hover {
+    background-color: white;
+  }
+   */
+.nav-links:hover a {
+    color: darkgreen;
+}
+
+.nav-links {
+    display: flex;
+    font-size: 15px;
+    word-spacing: 15px;
+    list-style: none;
+}
+
+/* 2nd row greetings */
+#greetings {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+/* GALLERY OFSHOPS */
+/* POP UP SHOPS*/
+
+.rowgallery{
+    margin-left: 100px;
+    padding-left: 30px;
+}
+
+.gallery:hover, #jobs:hover {
+    background-color: blanchedalmond;
+    padding: 0;
+    transform: scale(1.2);
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+
+.gallery img {
+    max-width: 100%;
+    background-color: cadetblue;
+    padding: 50px;
+    margin: 20px;
+}
+.desc {
+    text-align: center;
+    font-weight: bold;
+}
+.responsive {
+    float: left;
+    padding: 40px;
+    left: 100vw;
+    border: double, blanchedalmond;
+
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+/* * {*/
+/*  border: red 1px solid;*/
+/*}*/
