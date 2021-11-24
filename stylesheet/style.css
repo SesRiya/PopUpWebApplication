@@ -104,12 +104,13 @@ footer {
     transform: scale(1.1);
     transition: 0.4s ease-in;
 }
+
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
+}
 .nav-item {
     margin-left: 5rem;
 }
@@ -120,10 +121,15 @@ footer {
     color: #475569;
 }
 
+.cart {
+    width: 30vh;
+    height: 10vw;
+}
+
 /* 2nd row greetings */
 .motto {
     width: 100vw;
-display: flex;
+    display: flex;
     text-align: center;
     justify-content: center;
     margin: auto;
@@ -151,7 +157,6 @@ display: flex;
 }
 
 
-
 /* GALLERY OFSHOPS */
 /* POP UP SHOPS*/
 
@@ -163,7 +168,7 @@ display: flex;
 .gallery:hover {
     background-color: white;
     padding: 0;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.4s ease-in;
     cursor: pointer;
 }
@@ -184,8 +189,6 @@ display: flex;
     float: left;
     padding: 40px;
     left: 100vw;
-    border: double;
-
 }
 
 .clearfix:after {
@@ -237,14 +240,65 @@ display: flex;
 
 }
 
+/* CSS FOR LOGIN FORM */
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.btn{
+    color: #fff;
+    background: #337ab7;
+    padding: 7px;
+    width: 100%;
+}
+
+/* Add a red background color to the cancel button */
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
 
 
 /* Business Logos */
-.business{
+.business {
     display: flex;
     flex-direction: row;
     margin: auto;
 }
+
 /* * {*/
 /*  border: red 1px solid;*/
 /*}*/
