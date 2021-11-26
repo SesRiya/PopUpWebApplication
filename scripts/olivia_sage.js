@@ -1,6 +1,6 @@
-const shopItems = document.getElementById('shop-items');
+const shopPlantItems = document.getElementById('shop-plant-items');
+
 //Load all data on page load
-console.log("hello")
 postData('/PopUpWebApplication/services/service.php', {req: 'load-items', shop: 'olivia_sage'}).then((response) => {
     let contents = '';
     response.forEach((res) => {
@@ -9,17 +9,17 @@ postData('/PopUpWebApplication/services/service.php', {req: 'load-items', shop: 
         //     '<div><img src="'+ res['image_path']  + '"  alt="plant"/>' + '</div>' + '</div>';
         //
 
-       contents += '<div className="rowgallery">' +
-                '<div className="responsive">' +
-                    '<div className="gallery">' +
-                        '<a target="_blank" href="">' +
-                            '<img src="'+ res['image_path'] + '"  alt="plant" width="150" height="150"/>' +
-                        '</a>' +
-                        '<div className="desc">' + res['name'] + '</div>' +
-                    '</div>' +
-                '</div>';
+        contents += '<div class="rowgallery">' +'<br>' +
+            '<div class="responsive">' +
+            '<div class="gallery">' +
+            '<a target="_blank" href="">' +
+            '<img src="' + res['image_path'] + '"  alt="plant" width="300" height="300"/>' +
+            '</a>' +
+            '<div class="desc">' + res['name'] + res['price'] +
+             '<button id = "cartButton" class = "button" >' + "Cart " +
+                '</button> ' +'</div>' +'</div>' + '</div>' + '</div>' ;
 
-                });
+    });
     createItemsUI(contents);
 });
 
@@ -37,3 +37,5 @@ async function postData(url = '', data = {}) {
     });
     return response.json();
 }
+
+

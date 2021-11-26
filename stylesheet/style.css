@@ -258,6 +258,7 @@ footer {
     max-width: 300px;
     padding: 10px;
     background-color: white;
+
 }
 
 /* Full-width input fields */
@@ -299,6 +300,13 @@ footer {
     margin: auto;
 }
 
+#cartButton{
+    color:#337ab7;
+    background: #ffffff;
+    padding: 7px;
+    width: 40px;
+    height:30px;
+}
 /* * {*/
 /*  border: red 1px solid;*/
 /*}*/

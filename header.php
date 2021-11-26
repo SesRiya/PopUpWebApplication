@@ -25,6 +25,9 @@ session_start();
         <div class="loginbutton" title="Click to Log in" id="loginIcon">
             <i class="fas fa-user fa-2x"></i>
         </div>
+        <div>
+            <p id="welcomeUser">h</p>
+        </div>
         <!--LOGIN POPUP FORM-->
 
         <div class="form-popup" id="myForm">
@@ -58,7 +61,7 @@ session_start();
             <img src="images/Pop-Up.png" alt="Pop-Up Logo"/></a>
         <ul style=" list-style-type: none"  none class="nav-menu">
             <li class="nav-item">
-                <a href="#" class="nav-link">Services</a>
+                <a href="products.php" class="nav-link">Products</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Blog</a>
@@ -70,8 +73,8 @@ session_start();
                 <a href="#" class="nav-link">Contact</a>
             </li>
             <li class="nav-item" title="Add to cart">
-                <!--                <a href="#" class="nav-link">Cart</a>-->
-                <i class="fas fa-shopping-cart fa-3x" style="color:grey"></i>
+<!--                <i class="fas fa-shopping-cart fa-3x" style="color:grey" href = "cart.php"></i>-->
+                <a href="cart.php" class="nav-link">Cart</a>
             </li>
         </ul>
 
@@ -84,4 +87,18 @@ session_start();
     </nav>
     <!--Primary Navigation-->
 </header>
+
+<!--Button to get back to top of the Homepage-->
+<div>
+    <button id="goToTopBtn" title="Go to top">Top</button>
+</div>
+
+<!-- start #main-site-->
+<main id="main">
+    <!--2nd row -->
+    <div>
+        <div class="motto" id="motto">
+            <img src="images/motto.png" alt="motto" width="800" height="200"/>
+        </div>
+    </div>
 

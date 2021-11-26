@@ -1,19 +1,7 @@
 <?php
 include "header.php";
 ?>
-<!--Button to get back to top of the Homepage-->
-<div>
-    <button id="goToTopBtn" title="Go to top">Top</button>
-</div>
 
-<!-- start #main-site-->
-<main id="main">
-    <!--2nd row -->
-    <div>
-        <div class="motto" id="motto">
-            <img src="images/motto.png" alt="motto" width="800" height="200"/>
-        </div>
-    </div>
 
     <!--GALLERY OF POP - UPS-->
     <div class="rowgallery">
@@ -21,7 +9,7 @@ include "header.php";
         <h3 id="title2"></h3>
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="olivia&sage.php">
+                <a target="_blank" href="olivia&sage.php?shop=oliviasage">
                     <img src="images/plantspicture.png" alt="plantshop" width="450" height="300"/>
                 </a>
                 <div class="desc">Olivia & Sage</div>
@@ -30,7 +18,7 @@ include "header.php";
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="">
+                <a target="_blank" href="homedecor.php?shop=homedecor">
                     <img src="images/homedecor.png" alt="HomeDecor" width="450" height="300"/>
                 </a>
                 <div class="desc">Home by Olivia & Sage</div>
@@ -48,7 +36,7 @@ include "header.php";
 
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank" href="">
+                <a target="_blank" href="panaderiya.php?shop=panaderiya">
                     <img src="images/homebreads.png" alt="Breads" width="450" height="300"/>
                 </a>
                 <div class="desc">Panaderiya</div>

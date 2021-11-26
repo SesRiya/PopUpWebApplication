@@ -10,8 +10,8 @@
 </head>
 <body>
 <!--REGISTRATION FORM-->
-<div class="form-register" id="myForm">
-    <form class="form-container" action="user" .php
+<div class="form-register" id="registrationForm">
+    <form class="form-container" action="registration" .php
     " method="post">
     <h1>Become a Member</h1>
 
@@ -26,11 +26,13 @@
 
 
     <button type="submit" id="registrationButton" class="btn">Register</button>
-    <button type="button" id="closeButton" class="btn cancel"">Close</button>
-    <p>Registered?<a href="login_form.php" id="here" >Log in</a></p>
+    <button type="button" id="closeButton" class="btn cancel"
+    ">Close</button>
+    <p>Registered?<a href="login_form.php" id="here">Log in</a></p>
     </form>
 </div>
 
+<script src="../scripts/registration.js"></script>
 </body>
 </html>
 
