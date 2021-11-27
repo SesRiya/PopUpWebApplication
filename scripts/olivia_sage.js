@@ -9,22 +9,25 @@ postData('/PopUpWebApplication/services/service.php', {req: 'load-items', shop: 
         //     '<div><img src="'+ res['image_path']  + '"  alt="plant"/>' + '</div>' + '</div>';
         //
 
-        contents += '<div class="rowgallery">' +'<br>' +
+        contents += '<div class="rowgallery">' + '<br>' +
             '<div class="responsive">' +
             '<div class="gallery">' +
             '<a target="_blank" href="">' +
-            '<img src="' + res['image_path'] + '"  alt="plant" width="300" height="300"/>' +
+            '<img src="' + res['image_path'] + '"  alt="plant" width="350" height="300"/>' +
             '</a>' +
-            '<div class="desc">' + res['name'] + res['price'] +
-             '<button id = "cartButton" class = "button" >' + "Cart " +
-                '</button> ' +'</div>' +'</div>' + '</div>' + '</div>' ;
+            '<div class="desc" id="itemName">' + res['name'] +
+            '<div class="desc" id="itemPrice">' + res['price'] +
+            '<div id="quantity">' +  '<label for="quantity">Quantity:</label>' +
+            '<input id="qty" name="quantity" type="quantity" class="quantity">' +
+            '<div><button id = "cartButton" class = "button" >' + "Add to Cart " +
+            '</button> ' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>';
 
     });
     createItemsUI(contents);
 });
 
 function createItemsUI(contents) {
-    shopItems.innerHTML = contents;
+    shopPlantItems.innerHTML = contents;
 }
 
 async function postData(url = '', data = {}) {

@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,13 +11,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../stylesheet/style2.css">
+    <link rel="stylesheet" href="stylesheet/style2.css">
 </head>
 <body>
 <!--REGISTRATION FORM-->
 <div class="form-register" id="registrationForm">
-    <form class="form-container" action="registration" .php
-    " method="post">
+    <form class="form-container" action="services/register.php" method="post">
     <h1>Become a Member</h1>
 
     <label for="username"><b>username</b></label>
@@ -28,11 +32,11 @@
     <button type="submit" id="registrationButton" class="btn">Register</button>
     <button type="button" id="closeButton" class="btn cancel"
     ">Close</button>
-    <p>Registered?<a href="login_form.php" id="here">Log in</a></p>
+
     </form>
 </div>
 
-<script src="../scripts/registration.js"></script>
+<script src="scripts/registration.js"></script>
 </body>
 </html>
 

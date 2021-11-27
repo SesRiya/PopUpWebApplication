@@ -1,7 +1,9 @@
 <?php
-include "header.php";
-?>
+include ("header.php");
 
+
+
+?>
 <!--<div class="responsive" id="shop-items">-->
 <!--    <div class="gallery">-->
 <!--        <a target="_blank" href="">-->
@@ -19,3 +21,4 @@ include "header.php";
 </div>
 
 <script src="scripts/products.js"></script>
+<script src="scripts/order_cart.js"></script>

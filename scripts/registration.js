@@ -9,7 +9,6 @@ function validateUserInput() {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
 
-    console.log("inside userinput");
     if (usernameValue === '') {
         alert("username is required");
     } else if (emailValue === '') {
@@ -22,8 +21,16 @@ function validateUserInput() {
 }
 
 
-
 function isValidEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+
+document.getElementById("closeButton").addEventListener("click", goBackToIndex);
+
+function goBackToIndex(){
+    console.log("back");
+    window.location.href = "index.php";
+}
+
+

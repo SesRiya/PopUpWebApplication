@@ -307,6 +307,14 @@ footer {
     width: 40px;
     height:30px;
 }
+
+/* Cart Orders */
+#qty {
+    width: 50px;
+}
+#cartButton {
+    width: 200px;
+}
 /* * {*/
 /*  border: red 1px solid;*/
 /*}*/

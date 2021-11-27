@@ -23,13 +23,14 @@ session_start();
 <header>
     <div class="topbar">
         <div class="loginbutton" title="Click to Log in" id="loginIcon">
-            <i class="fas fa-user fa-2x"></i>
+            <BUTTON>Log in</BUTTON>
+<!--            <i class="fas fa-user fa-2x"></i>-->
         </div>
         <div>
-            <p id="welcomeUser">h</p>
+            <p id="welcomeUser"></p>
         </div>
-        <!--LOGIN POPUP FORM-->
 
+ <!--       LOGIN POPUP FORM -->
         <div class="form-popup" id="myForm">
             <div class="form-container">
                 <h1>Login</h1>
@@ -42,7 +43,7 @@ session_start();
 
                 <button id="loginButton" class="btn" >Login</button>
                 <button type="button" id="closeButton" class="btn cancel" ">Close</button>
-                <p>Not yet registered? Register <a href="layout/registration_form.php" id="here" >here</a></p>
+                <p>Not yet registered? Register <a href="registration_form.php" id="here" >here</a></p>
             </div>
         </div>
 

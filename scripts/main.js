@@ -1,18 +1,27 @@
-// script for  navbar responsiveness
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const username = document.getElementById("username");
-// const email = document.getElementById("email");
 const password = document.getElementById("password");
 
+const navLink = document.querySelectorAll(".nav-link");
+
+const myButton = document.getElementById("goToTopBtn");
+
+const login = document.getElementById("loginButton");
+const loginIcon =document.getElementById("loginIcon");
+
+
+//global variables
+let status;
+let uname;
+
+// script for  navbar responsiveness
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 }
-
-const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
@@ -22,9 +31,6 @@ function closeMenu() {
 }
 
 //Return to Top of Page Button
-// Get the button:
-const myButton = document.getElementById("goToTopBtn");
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction()
@@ -46,29 +52,40 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-//Add event listener to LoginButton
+// Open Pop Up login Form
 document.getElementById("loginIcon").addEventListener("click", openForm);
 
 function openForm() {
-    document.getElementById("myForm").style.display = "block";
+   window.location.href = "login_form.php";
 }
 
+//Close Pop up Login Form
 document.getElementById("closeButton").addEventListener("click", closeForm);
 
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
-const login = document.getElementById("loginButton");
-login.addEventListener('click',() => {
+// Login Method
+login.addEventListener('click', () => {
 
     let userName = username.value;
     let pwd = password.value;
     //After loading data perform the task defined response in the then clause
-    postData('/PopUpWebApplication/services/service.php', {req:'login',username:userName, pwd:pwd}).then((response)=>{
-        console.log(response['status']);
-    });
+    postData('/PopUpWebApplication/services/service.php', {
+        req: 'login',
+        username: userName,
+        pwd: pwd
+    }).then((response) => {
+       status = (response['status']);
+       uname = (response['user_name']);
+        if (status === "login_success") {
+            console.log((response['user_name']));
+            document.getElementById("welcomeUser").innerText = uname;
+        }
+        closeForm();
 
+    });
 });
 
 async function postData(url = '', data = {}) {
@@ -83,15 +100,7 @@ async function postData(url = '', data = {}) {
 }
 
 // Login Validation if username and password fields are not empty
-const formLogin = document.getElementById("form-popup");
-
-
-document.getElementById("loginButton").addEventListener("click", validateInputs);
-
-// function isValidEmail(email) {
-//     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(String(email).toLowerCase());
-// }
+login.addEventListener("click", validateInputs);
 
 function validateInputs() {
     const usernameValue = username.value.trim();
@@ -100,15 +109,18 @@ function validateInputs() {
 
     if (usernameValue === '') {
         alert("username is required");
-        // if (emailValue === '') {
-        //     alert("email is required");
-        // } else if (!isValidEmail(emailValue)) {
-        //     alert("email is required");
     } else if (passwordValue === '') {
         alert("password is required");
     }
-    // } else if (passwordValue.length < 8) {
-    //     alert("Password must be at least 8 character.");
-    // }
+}
 
+loginIcon.addEventListener("click", checkIfUserLogged);
+function checkIfUserLogged(){
+    if (status === "login_success"){
+        window.location.href = "user_profile.php";
+    }
+    else{
+        openForm();
+        console.log("not working");
+    }
 }
