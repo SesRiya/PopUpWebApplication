@@ -56,7 +56,7 @@ function topFunction() {
 document.getElementById("loginIcon").addEventListener("click", openForm);
 
 function openForm() {
-   window.location.href = "login_form.php";
+    document.getElementById("myForm").style.display = "block";
 }
 
 //Close Pop up Login Form

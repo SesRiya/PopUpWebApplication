@@ -1,7 +1,7 @@
  const shopAllProducts = document.getElementById('shop-products-items');
 
 //Load all data on page load
-postData('/PopUpWebApplication/services/service.php', {req: 'load-all-items'}).then((response) => {
+postData('/PopUpWebApplication/services/service.php', {req: 'load-all'}).then((response) => {
     let contents = '';
     response.forEach((res) => {
 
@@ -62,3 +62,4 @@ async function postData(url = '', data = {}) {
 //     return result;
 //
 // }
+

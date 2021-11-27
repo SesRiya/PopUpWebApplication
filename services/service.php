@@ -4,7 +4,7 @@ session_start();
 $_POST = json_decode(file_get_contents('php://input'), true);
 $data = array();
 
-// Login using Post
+//Login
 if ($_POST['req'] == 'login' && ($_POST['username'] && $_POST['pwd'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['pwd']);
@@ -48,7 +48,7 @@ if ($_POST['req'] == 'login' && ($_POST['username'] && $_POST['pwd'])) {
     }
 
     //Load products from all table in database
-} elseif ($_POST['req'] == 'load-all-items') {
+} elseif ($_POST['req'] == 'load-all') {
     $sql = "SELECT * FROM olivia_sage UNION ALL SELECT * FROM home_decor UNION ALL SELECT  * FROM panade_riya";
     $result = mysqli_query($conn, $sql);
     $results = array();

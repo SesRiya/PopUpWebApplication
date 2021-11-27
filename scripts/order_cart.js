@@ -9,8 +9,10 @@ orderCart.addEventListener('click', ()=>{
     order('/PopUpWebApplication/services/order.php', data).then((response)=>{
         console.log(response);
         if(response['message'] === 'order-added-successfully') {
-            window.location.href = '/fine_art_shop/payment.php';
+            console.log("test");
+            window.location.href = 'cart.php';
         }
+
     });
 
 });
