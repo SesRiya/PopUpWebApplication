@@ -82,6 +82,9 @@ login.addEventListener('click', () => {
         if (status === "login_success") {
             console.log((response['user_name']));
             document.getElementById("welcomeUser").innerText = uname;
+        }else if (status == "login_error") {
+            console.log("login failed");
+            alert("login failed. check again");
         }
         closeForm();
 
@@ -123,4 +126,13 @@ function checkIfUserLogged(){
         openForm();
         console.log("not working");
     }
+}
+
+//Search Button
+document.getElementById("searchButton").addEventListener("click", searchBar);
+
+function searchBar() {
+    console.log("clicked");
+    window.location = 'http://www.google.com/search?q=site:yoursitename.com ' + document.getElementById('searchBar').value;
+    return false;
 }

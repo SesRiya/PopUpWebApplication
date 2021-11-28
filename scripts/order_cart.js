@@ -7,6 +7,7 @@ function orderProduct(obj) {
     orderItems('/PopUpWebApplication/services/order.php', orderData).then((response)=>{
         if(response['message'] === 'order-added-successfully') {
             window.location.href = 'cart.php';
+            alert("added to cart successfully")
         }
     });
 }
@@ -21,3 +22,4 @@ async function orderItems(url, data) {
     });
     return response.json();
 }
+

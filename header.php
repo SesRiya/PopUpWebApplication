@@ -23,8 +23,7 @@ session_start();
 <header>
     <div class="topbar">
         <div class="loginbutton" title="Click to Log in" id="loginIcon">
-            <BUTTON>Log in</BUTTON>
-<!--            <i class="fas fa-user fa-2x"></i>-->
+            <i class="fas fa-user fa-2x"></i>
         </div>
         <div>
             <p id="welcomeUser"></p>
@@ -48,10 +47,10 @@ session_start();
         </div>
 
         <div class="searchbar">
-            <input type="text" class="searchTerm" placeholder="Search">
+            <input type="text" id="searchBar" class="searchTerm" placeholder="Search">
         </div>
         <div class="searchbutton">
-            <button type="submit" class="searchButton">
+            <button type="submit" id="searchButton" class="searchBtn">
                 <i class="fa fa-search fa-2x"></i>
             </button>
         </div>

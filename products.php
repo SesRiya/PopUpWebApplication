@@ -9,3 +9,10 @@ include ("header.php");
 </div>
     <script src="scripts/order_cart.js"></script>
 </body>
+
+<footer>
+    <?php
+    include "footer.php";
+    ?>
+
+</footer>

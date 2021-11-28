@@ -23,9 +23,9 @@ if ($_POST['req'] == 'login' && ($_POST['username'] && $_POST['pwd'])) {
             $_SESSION['success'] = "You have logged in!";
             $_SESSION['id'] = $row['id'];
             $data = array('user_name' => $row['user_name'], 'id' => $row['id'], 'status' => 'login_success');
-//                       header('Location: ../index.php?logged-in');
-        }
-    } else {
+        } else {
+            $data = array('status' => 'login_error');}
+    }else {
         $data = array('status' => 'login_error');
     }
     echo json_encode($data);

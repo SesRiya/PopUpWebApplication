@@ -2,11 +2,6 @@
 include "header.php";
 ?>
 
-<div id="pp" class="powerplant">
-    <h1 id="os">Olivia & Sage</h1>
-    <h3><p> Olivia & Sage is a plant specialty store</p></h3>
-</div>
-
 <div class="rowgallery">
     <br>
     <h3 id="title2"></h3>
@@ -21,9 +16,13 @@ include "header.php";
 </div>
 
 </main>
-<footer>footer</footer>
 <script src="scripts/order_cart.js"></script>
 </body>
+<footer>
+    <?php
+    include "footer.php";
+    ?>
 
+</footer>
 </html>
 

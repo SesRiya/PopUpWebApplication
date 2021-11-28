@@ -76,7 +76,12 @@ include "header.php";
     </div>
     <!-- Business Logo -->
 </main>
-<footer>Copyright @2021</footer>
+<footer>
+    <?php
+    include "footer.php";
+    ?>
+
+</footer>
 
 <script src="scripts/main.js"></script>
 </body>
