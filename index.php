@@ -2,6 +2,13 @@
 include "header.php";
 ?>
 
+<main id="main">
+    <!--2nd row -->
+    <div>
+        <div class="motto" id="motto">
+            <img src="images/motto.png" alt="motto" width="800" height="200"/>
+        </div>
+    </div>
 
     <!--GALLERY OF POP - UPS-->
     <div class="rowgallery">
@@ -69,7 +76,7 @@ include "header.php";
     </div>
     <!-- Business Logo -->
 </main>
-<footer>footer</footer>
+<footer>Copyright @2021</footer>
 
 <script src="scripts/main.js"></script>
 </body>

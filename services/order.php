@@ -1,6 +1,6 @@
 <?php
 $_POST = json_decode(file_get_contents('php://input'), true);
-include ('db-conn.php');
+include('../db_conn.php');
 $item = $_POST['item'];
 $price = $_POST['price'];
 $quantity = $_POST['quantity'];

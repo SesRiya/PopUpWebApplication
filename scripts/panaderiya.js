@@ -15,7 +15,7 @@ postData('/PopUpWebApplication/services/service.php', {req: 'load-items', shop: 
             '<img src="' + res['image_path'] + '"  alt="plant" width="300" height="300"/>' +
             '</a>' +
             '<div class="desc">' + res['name'] + res['price'] +
-            '<button id = "cartButton" class = "button" >' + "Cart " +
+            '<button  class = "button" >' + "Cart " +
             '</button> ' +'</div>' +'</div>' + '</div>' + '</div>' ;
 
 

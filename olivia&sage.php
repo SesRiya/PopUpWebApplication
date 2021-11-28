@@ -19,7 +19,7 @@ include "header.php";
         <div class="gallery">
             <a target="_blank" href="olivia&sage.php?shop=oliviasage">
             <script src="scripts/olivia_sage.js"></script>
-            <image src="../images/plant1.jpg" height="200px" width="300px"/>
+            <image src="images/plant1.jpg" height="200px" width="300px"/>
             </a>
         </div>
     </div>

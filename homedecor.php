@@ -14,7 +14,7 @@ include "header.php";
 <div id="shop-decor-items" class="responsive">
     <div class ="gallery">
         <script src="scripts/home_decor.js"></script>
-        <image src="../images/plant1.jpg" height="200px" width="300px"></image>
+        <image src="images/plant1.jpg" height="200px" width="300px"></image>
     </div>
 </div>
 

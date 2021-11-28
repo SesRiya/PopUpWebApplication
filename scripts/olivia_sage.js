@@ -19,7 +19,7 @@ postData('/PopUpWebApplication/services/service.php', {req: 'load-items', shop: 
             '<div class="desc" id="itemPrice">' + res['price'] +
             '<div id="quantity">' +  '<label for="quantity">Quantity:</label>' +
             '<input id="qty" name="quantity" type="quantity" class="quantity">' +
-            '<div><button id = "cartButton" class = "button" >' + "Add to Cart " +
+            '<div><button class = "button" >' + "Add to Cart " +
             '</button> ' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>';
 
     });

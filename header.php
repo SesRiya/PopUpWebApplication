@@ -95,11 +95,4 @@ session_start();
 </div>
 
 <!-- start #main-site-->
-<main id="main">
-    <!--2nd row -->
-    <div>
-        <div class="motto" id="motto">
-            <img src="images/motto.png" alt="motto" width="800" height="200"/>
-        </div>
-    </div>
 

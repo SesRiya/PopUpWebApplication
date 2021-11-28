@@ -62,7 +62,16 @@ if ($_POST['req'] == 'login' && ($_POST['username'] && $_POST['pwd'])) {
     } else {
         echo json_encode($results);
     }
-} else {
+} else if($_POST['req'] == 'order') {
+    $sql = "INSERT INTO shoppingcart (order_id, item_id, quantity,price) VALUES (1, " . $_POST['item_id'] . ",".$_POST['quantity'].",".$_POST['price'].")";
+    if($conn->query($sql) === TRUE) {
+        $msg = array('status'=>'order_added_successfully');
+        echo json_encode($msg);
+    } else {
+        $msg = array('status'=>$conn->error);
+        echo json_encode($msg);
+    }
+}else {
     $data = array('status' => 'invalid_request');
     echo json_encode($data);
 }
