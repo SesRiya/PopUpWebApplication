@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $_SESSION['username'];
+ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,5 +14,7 @@
 </head>
 <body>
 <p> Profile Page</p>
+<p>Welcome! </p>
+<?php  $_SESSION['username'] ?>
 </body>
 </html>

@@ -12,6 +12,8 @@ function orderProduct(obj) {
     });
 }
 
+
+
 async function orderItems(url, data) {
     const response = await fetch(url, {
         method: 'POST',

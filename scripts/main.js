@@ -129,10 +129,17 @@ function checkIfUserLogged(){
 }
 
 //Search Button
-document.getElementById("searchButton").addEventListener("click", searchBar);
 
-function searchBar() {
-    console.log("clicked");
-    window.location = 'http://www.google.com/search?q=site:yoursitename.com ' + document.getElementById('searchBar').value;
-    return false;
+const f = document.getElementById('searchButton');
+const q = document.getElementById('searchBar');
+const google = 'https://www.google.com/search?q=site%3A+';
+
+
+function submitted(event) {
+    event.preventDefault();
+    const url = google + '+' + q.value;
+    const win = window.open(url, '_blank');
+    win.focus();
 }
+
+f.addEventListener('click', submitted);

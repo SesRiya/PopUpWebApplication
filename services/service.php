@@ -24,8 +24,9 @@ if ($_POST['req'] == 'login' && ($_POST['username'] && $_POST['pwd'])) {
             $_SESSION['id'] = $row['id'];
             $data = array('user_name' => $row['user_name'], 'id' => $row['id'], 'status' => 'login_success');
         } else {
-            $data = array('status' => 'login_error');}
-    }else {
+            $data = array('status' => 'login_error');
+        }
+    } else {
         $data = array('status' => 'login_error');
     }
     echo json_encode($data);
@@ -62,16 +63,30 @@ if ($_POST['req'] == 'login' && ($_POST['username'] && $_POST['pwd'])) {
     } else {
         echo json_encode($results);
     }
-} else if($_POST['req'] == 'order') {
-    $sql = "INSERT INTO shoppingcart (order_id, item_id, quantity,price) VALUES (1, " . $_POST['item_id'] . ",".$_POST['quantity'].",".$_POST['price'].")";
-    if($conn->query($sql) === TRUE) {
-        $msg = array('status'=>'order_added_successfully');
+} else if ($_POST['req'] == 'order') {
+    $sql = "INSERT INTO shoppingcart (order_id, item_id, quantity,price) VALUES (1, " . $_POST['item_id'] . "," . $_POST['quantity'] . "," . $_POST['price'] . ")";
+    if ($conn->query($sql) === TRUE) {
+        $msg = array('status' => 'order_added_successfully');
         echo json_encode($msg);
     } else {
-        $msg = array('status'=>$conn->error);
+        $msg = array('status' => $conn->error);
         echo json_encode($msg);
     }
-}else {
+} elseif ($_POST['req'] == 'load-to-cart') {
+    $sql = "SELECT * FROM order_cart";
+    $result = mysqli_query($conn, $sql);
+    $results = array();
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+            $rowData = array('order_id' => $row['order_id'], 'item_name' => $row['item_name'], 'price' => $row['price'], 'qty' => $row['quantity']);
+            $results[] = $rowData;
+        }
+        echo json_encode($results);
+    } else {
+        echo json_encode($results);
+    }
+} else {
     $data = array('status' => 'invalid_request');
     echo json_encode($data);
 }
