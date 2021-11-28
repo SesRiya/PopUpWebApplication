@@ -1,6 +1,7 @@
 <?php
 $_POST = json_decode(file_get_contents('php://input'), true);
 include('../db_conn.php');
+
 $item = $_POST['item'];
 $price = $_POST['price'];
 $quantity = $_POST['quantity'];
@@ -11,7 +12,7 @@ $quantity = $_POST['quantity'];
     // else show error
     //Update the products table with remaining qty, UPDATE query
     $total_price = $price * $quantity; //Calculate the total price of the order
-    $sql = "INSERT INTO order_cart (item_name, item_price, quantity) VALUES (?,?,?)";
+    $sql = "INSERT INTO order_cart (item_name, price, quantity) VALUES (?,?,?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sdi", $item,$total_price,$quantity);
     $stmt->execute();

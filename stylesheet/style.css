@@ -315,6 +315,12 @@ footer {
 #cartButton {
     width: 200px;
 }
+
+/*OLivia and Sage Page */
+#pp {
+   background-image: url("../images/pp.jpg");
+}
+
 /* * {*/
 /*  border: red 1px solid;*/
 /*}*/

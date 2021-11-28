@@ -2,15 +2,10 @@
 include "header.php";
 ?>
 
-<!--<div class="responsive" id="shop-items">-->
-<!--    <div class="gallery">-->
-<!--        <a target="_blank" href="">-->
-<!--            <script src="scripts/main.js"></script>-->
-<!--            <img src="../images/plant1.jpg" alt="PartyEvents" width="250" height="250"/>-->
-<!--        </a>-->
-<!--        <div class="desc">Style Savvy Parties</div>-->
-<!--    </div>-->
-<!--</div>-->
+<div id="pp" class="powerplant">
+    <h1 id="os">Olivia & Sage</h1>
+    <h3><p> Olivia & Sage is a plant specialty store</p></h3>
+</div>
 
 <div class="rowgallery">
     <br>
@@ -27,8 +22,7 @@ include "header.php";
 
 </main>
 <footer>footer</footer>
-<script src="scripts/olivia_sage.js"></script>
-<script src="scripts/main.js"></script>
+<script src="scripts/order_cart.js"></script>
 </body>
 
 </html>

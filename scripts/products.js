@@ -15,8 +15,8 @@ postData('/PopUpWebApplication/services/service.php', {req: 'load-all'}).then((r
             '<div class="desc" id='+res['id']+'price'+'>' + res['price'] +'</div>' +
             '<div id="quantity">' +  '<label for="quantity">Quantity:</label>' +
             '<input id='+res['id']+'qty'+' name="quantity" type="quantity" class="quantity">' +
-            '<div><button data-id='+res['id']+' onclick="orderProduct(this)" class = "button" >' + "Add to Cart111 " +
-            '</button> ' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>' + '</div>';
+            '<div><button data-id='+res['id']+' onclick="orderProduct(this)" class = "button" >' + "Add to Cart" +
+            '</button> '  + '</div>' + '</div>' + '</div>' + '</div>' + '</div>';
 
     });
     createItemsUI(contents);

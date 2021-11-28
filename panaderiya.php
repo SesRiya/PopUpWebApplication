@@ -18,4 +18,4 @@ include "header.php";
     </div>
 </div>
 
-<script src="scripts/panaderiya.js"></script>
+<script src="scripts/order_cart.js"></script>
